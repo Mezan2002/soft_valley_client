@@ -1,8 +1,10 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -21,6 +23,8 @@ const Login = () => {
       .then((data) => {
         if (data.success) {
           toast.success("Logged In Successfully!");
+          navigate("/mainHome");
+          localStorage.setItem("token", data.data.token);
           console.log(data);
         }
       })
