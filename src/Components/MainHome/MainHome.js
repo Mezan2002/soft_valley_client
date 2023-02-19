@@ -5,6 +5,7 @@ const MainHome = () => {
   return (
     <div>
       <div className="flex min-h-screen">
+        {/* left side navbar start */}
         <div className="bg-[#FFFFFF] w-2/12 border-r border-gray-200">
           <div className="px-4">
             <img
@@ -25,7 +26,7 @@ const MainHome = () => {
               <h2 className="ml-2">Hello! Good Evening Admin</h2>
             </div>
           </div>
-          <div className="w-full h-[2px] mt-5 bg-[#cbcbcb]"></div>
+          <div className="w-full h-[1px] mt-5 bg-[#cbcbcb]"></div>
           <div className="">
             <ul className="menu">
               <li>
@@ -73,21 +74,30 @@ const MainHome = () => {
             </ul>
           </div>
         </div>
+        {/* left side navbar end */}
         <div className="bg-[#FBFBFB] w-11/12">
           <div className="py-3 px-7 flex items-center justify-between">
             <div>
               <h2 className="font-medium text-xl">Leads</h2>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             </div>
-            <div>
+            <div className="flex items-center">
               <img
                 src="https://i.ibb.co/WFJTtq2/full-screen.png"
-                className="w-5"
+                className="w-5 mr-3"
                 alt=""
               />
+              <div className="avatar">
+                <div className="w-12 rounded-full">
+                  <img
+                    src="https://www.seekpng.com/png/full/356-3562377_personal-user.png"
+                    alt=""
+                  />
+                </div>
+              </div>
             </div>
           </div>
-          <div className="mt-8 relative px-7">
+          <div className="mt-7 relative px-7">
             <input
               type="text"
               placeholder="Search in leads table..."
@@ -99,6 +109,7 @@ const MainHome = () => {
               className="absolute top-[10px] right-[75%] w-5"
             />
           </div>
+          <div className="w-full h-[1px] mt-5 bg-[#EFEFEF]"></div>
         </div>
       </div>
     </div>
